@@ -19,43 +19,12 @@ const FooterCopyRights = dynamic(() => import("../components/Footer/FooterCopyRi
 
 function App({ Component, pageProps, serverRenderedHeader }) {
   const { locale } = useRouter();
-  const router = useRouter();
-  const [showButton, setShowButton] = useState(100);
-  const [headerLoaded, setHeaderLoaded] = useState(false);
-  //UA-249956445-1//
-  //UA-250103509-1//
-  // G-JBD2HNXM4S//
-  // G-ELZDSSFFXD
-  //FMD2181M8B
-  const TRACKING_ID = "G-JBD2HNXM4S";
-  // const TRACKING_ID = "UA-250103509-1";
-  ReactGA.initialize(TRACKING_ID);
-  useEffect(() => {
-    document.documentElement.dir = locale === "ar" ? "rtl" : "ltr";
-  }, [locale]);
-  useEffect(() => {
-    setHeaderLoaded(true);
-  }, []);
+
   const theme = createTheme({
     typography: {
       fontFamily: locale === "ar" ? "Tajawal" : "Ample",
       letterSpacing: "0.00938em !important",
       lineHeight: " 1.5 !important",
-    },
-    MuiTypography: {
-      styleOverrides: {
-        root: {
-          letterSpacing: "0.00938em !important",
-          lineHeight: " 1.5 !important",
-        },
-      },
-    },
-    MuiGrid: {
-      styleOverrides: {
-        root: {
-          marigin: "0px",
-        },
-      },
     },
   });
 
@@ -70,12 +39,12 @@ function App({ Component, pageProps, serverRenderedHeader }) {
         <meta name="description" content="Crowdfunding in Saudi Arabia | SME Crowd Lending in Saudi Arabia" />
       </Head>
 
-      {headerLoaded && <Header />}
+      <Header />
       {/* <Component {...pageProps} /> */}
       <Component {...pageProps} />
-      {headerLoaded && <Footer />}
-      {headerLoaded && <ScrollToTop smooth color="#37A753" />}
-      {headerLoaded && <FooterCopyRights />}
+      <Footer />
+      <ScrollToTop smooth color="#37A753" />
+      <FooterCopyRights />
     </ThemeProvider>
   );
 }

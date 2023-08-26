@@ -16,6 +16,14 @@
     src: local('Tajawal'), url(/font/Tajawal-Regular.ttf) format('truetype');
 }
 
+body {
+    font-family: 'Ample'
+}
+
+[dir='rtl'] body {
+    font-family: 'Tajawal'
+}
+
 .MuiCheckbox-colorPrimary.Mui-checked {
     color: #37a753;
 }
