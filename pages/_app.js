@@ -72,10 +72,9 @@ function App({ Component, pageProps, serverRenderedHeader }) {
       {headerLoaded && <Header />}
       {/* <Component {...pageProps} /> */}
       {headerLoaded && <Component {...pageProps} />}
-
-      <Footer />
-      <ScrollToTop smooth color="#37A753" />
-      <FooterCopyRights />
+      {headerLoaded && <Footer />}
+      {headerLoaded && <ScrollToTop smooth color="#37A753" />}
+      {headerLoaded && <FooterCopyRights />}
     </ThemeProvider>
   );
 }
