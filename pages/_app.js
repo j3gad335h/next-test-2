@@ -1,3 +1,4 @@
+import Header from "../components/Header/Header";
 import { CssBaseline } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/system";
@@ -12,11 +13,11 @@ import ScrollToTop from "react-scroll-to-top";
 import "../styles/Home.module.css";
 import "../styles/fonts.css";
 import Loader from "../components/Loader/Loader";
-const NewHeader = dynamic(() => import("../components/Header/NewHeader"));
+
 const Footer = dynamic(() => import("../components/Footer/Footer"));
 const FooterCopyRights = dynamic(() => import("../components/Footer/FooterCopyRights"));
 
-function App({ Component, pageProps }) {
+function App({ Component, pageProps, serverRenderedHeader }) {
   const { locale } = useRouter();
   const router = useRouter();
   const [showButton, setShowButton] = useState(100);
@@ -57,6 +58,7 @@ function App({ Component, pageProps }) {
 
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Head>
         <title>Raqamyah | رقمية - Crowdfunding in Saudi Arabia | SME Crowd Lending in Saudi Arabia</title>
         <meta charSet="utf-8" />
@@ -64,8 +66,7 @@ function App({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Crowdfunding in Saudi Arabia | SME Crowd Lending in Saudi Arabia" />
       </Head>
-      <NewHeader />
-      <CssBaseline />
+      <Header />
       {/* <Component {...pageProps} /> */}
       <Component {...pageProps} />
       <Footer />
@@ -74,4 +75,5 @@ function App({ Component, pageProps }) {
     </ThemeProvider>
   );
 }
+
 export default appWithTranslation(App);
