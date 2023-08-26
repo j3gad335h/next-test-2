@@ -69,7 +69,7 @@ function App({ Component, pageProps, serverRenderedHeader }) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Crowdfunding in Saudi Arabia | SME Crowd Lending in Saudi Arabia" />
       </Head>
-      {headerLoaded && <Header />}
+      <Header />
       {/* <Component {...pageProps} /> */}
       {headerLoaded && <Component {...pageProps} />}
       {headerLoaded && <Footer />}
