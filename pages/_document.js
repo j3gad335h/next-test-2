@@ -4,13 +4,7 @@ import React, { useEffect } from "react";
 
 function MyDocument(props) {
   const { locale } = props;
-  useEffect(() => {
-    // Remove the server-side injected CSS once the client-side takes over
-    const jssStyles = document.querySelector("#jss-server-side");
-    if (jssStyles) {
-      jssStyles.parentElement.removeChild(jssStyles);
-    }
-  }, []);
+
 
   return (
     <Html dir={locale === "ar" ? "rtl" : "ltr"} lang={locale}>
