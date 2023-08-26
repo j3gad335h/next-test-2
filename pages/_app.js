@@ -69,9 +69,10 @@ function App({ Component, pageProps, serverRenderedHeader }) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Crowdfunding in Saudi Arabia | SME Crowd Lending in Saudi Arabia" />
       </Head>
-      <Header />
+
+      {headerLoaded && <Header />}
       {/* <Component {...pageProps} /> */}
-      {headerLoaded && <Component {...pageProps} />}
+      <Component {...pageProps} />
       {headerLoaded && <Footer />}
       {headerLoaded && <ScrollToTop smooth color="#37A753" />}
       {headerLoaded && <FooterCopyRights />}
