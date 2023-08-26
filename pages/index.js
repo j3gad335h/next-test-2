@@ -125,18 +125,15 @@ export async function getStaticProps({ locale }) {
 const useStyles = makeStyles((theme, locale) => ({
   mainSection: {
     backgroundColor: "#EFEFF0",
-    marginTop: '110px',
     height: '100% !important',
     overflow: 'hidden',
     [theme.breakpoints.down('md')]: {
       backgroundColor: "#EFEFF0",
-      marginTop: '110px',
       height: '100% !important',
       overflow: 'hidden',
     },
     [theme.breakpoints.down('sm')]: {
       backgroundColor: "#EFEFF0",
-      marginTop: '110px',
       height: '100% !important',
       overflow: 'hidden',
     }

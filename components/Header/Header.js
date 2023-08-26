@@ -127,7 +127,7 @@ function Header(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex" }} className={classes.mainSection}>
       <AppBar component="nav">
         <Toolbar className={classes.buttonToolbar}>
           <Container className={classes.buttonContainer}>
@@ -140,13 +140,6 @@ function Header(props) {
                 <LoginButton />
               </Grid>
             </Grid>
-            {/* <Box className={classes.scmButtonToolbarBox}>
-                            <ScmLoginButton />
-                        </Box>
-                        <Box className={classes.buttonToolbarBox}>
-                            <LocaleSwitcher />
-                            <LoginButton />
-                        </Box> */}
           </Container>
         </Toolbar>
         <Toolbar className={classes.menuToolbar}>
@@ -203,6 +196,20 @@ Header.propTypes = {
   window: PropTypes.func,
 };
 const useStyles = makeStyles((theme, locale) => ({
+  mainSection: {
+    height: "110px !important",
+    overflow: "hidden",
+    [theme.breakpoints.down("md")]: {
+      backgroundColor: "#EFEFF0",
+      height: "110px !important",
+      overflow: "hidden",
+    },
+    [theme.breakpoints.down("sm")]: {
+      backgroundColor: "#EFEFF0",
+      height: "110px !important",
+      overflow: "hidden",
+    },
+  },
   buttonToolbar: {
     background: "linear-gradient(0.25turn, #28A4DB, #3AB15F) !important",
     minHeight: "40px !important",
