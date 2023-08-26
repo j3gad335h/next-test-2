@@ -1,4 +1,4 @@
-import Header from "../components/Header/Header";
+
 import { CssBaseline } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/system";
@@ -12,8 +12,7 @@ import ReactGA from "react-ga4";
 import ScrollToTop from "react-scroll-to-top";
 import "../styles/Home.module.css";
 import "../styles/fonts.css";
-import Loader from "../components/Loader/Loader";
-
+const Header = dynamic(() => import("../components/Header/Header"));
 const Footer = dynamic(() => import("../components/Footer/Footer"));
 const FooterCopyRights = dynamic(() => import("../components/Footer/FooterCopyRights"));
 

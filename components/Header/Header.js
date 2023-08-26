@@ -125,10 +125,9 @@ function Header(props) {
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
-                
+
   return (
     <Box sx={{ display: "flex" }}>
-      <CssBaseline />
       <AppBar component="nav">
         <Toolbar className={classes.buttonToolbar}>
           <Container className={classes.buttonContainer}>
