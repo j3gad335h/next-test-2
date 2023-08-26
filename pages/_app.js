@@ -21,6 +21,7 @@ function App({ Component, pageProps, serverRenderedHeader }) {
   const { locale } = useRouter();
   const router = useRouter();
   const [showButton, setShowButton] = useState(100);
+  const [headerLoaded, setHeaderLoaded] = useState(false);
   //UA-249956445-1//
   //UA-250103509-1//
   // G-JBD2HNXM4S//
@@ -32,7 +33,9 @@ function App({ Component, pageProps, serverRenderedHeader }) {
   useEffect(() => {
     document.documentElement.dir = locale === "ar" ? "rtl" : "ltr";
   }, [locale]);
-
+  useEffect(() => {
+    setHeaderLoaded(true);
+  }, []);
   const theme = createTheme({
     typography: {
       fontFamily: locale === "ar" ? "Tajawal" : "Ample",
@@ -66,7 +69,7 @@ function App({ Component, pageProps, serverRenderedHeader }) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Crowdfunding in Saudi Arabia | SME Crowd Lending in Saudi Arabia" />
       </Head>
-      <Header />
+      {headerLoaded && <Header />}
       {/* <Component {...pageProps} /> */}
       <Component {...pageProps} />
       <Footer />
