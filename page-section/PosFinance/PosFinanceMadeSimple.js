@@ -1,0 +1,300 @@
+import { Box, Button, Card, Container, Divider, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import { useTranslation } from "next-i18next";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import BaseUrl from '../../baseUrl';
+export default function PosFinanceMadeSimple() {
+    const classes = useStyles();
+    const { locale } = useRouter();
+    const { t } = useTranslation('common');
+    const theme = useTheme();
+    const veryWideScreen = useMediaQuery(theme.breakpoints.up('sm'), {
+        noSsr: true,
+    });
+    const image1 = "/assetsNew/images/PosFinance/Graphics01.svg";
+    return (
+        <section>
+             <Container maxWidth="lg">
+             <Grid container spacing={2}>
+                <Grid textAlign={'center'} item xs={12} sm={12} md={12} lg={12} xl={12}>
+                    <Typography className={classes.Title}>{t('posFinance.posfinaceQualitySmesQickyEasyTitle')}</Typography>
+                    <Divider className={classes.Divider} />
+                </Grid>
+            </Grid>
+             </Container>
+            <Container maxWidth="lg">
+                <Box py={5}>
+                    <Grid container spacing={2}>
+                        <Grid className={classes.servicImageeGrid} item xs={12} sm={12} md={12} lg={12} xl={12}>
+                            <Image height={veryWideScreen ? 400 : 200} width={veryWideScreen ? 800 : 400} alt="finance-icon" className={classes.getFinanceQuickIcon} src={image1} />
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={2}>
+                        <Grid className={classes.serviceGrid} item xs={12} sm={12} md={6} lg={6} xl={6}>
+                            <Box className={classes.iconBox}>
+                                <Typography className={classes.labelNumber}>1</Typography>
+                            </Box>
+                            <Box className={classes.cardBox}>
+                                <Card className={classes.getFinaceQuickCardFull}>
+                                    <Box className={classes.getFinaceQuickCardsBox}>
+                                        <Typography className={classes.cardTitle}>{t('posFinance.posfinaceQualitySmesQickyEasyCardTitle1')}</Typography>
+                                        <Typography className={classes.cardDiscription}>{t('posFinance.posfinaceQualitySmesQickyEasyCardDiscription1')}</Typography>
+                                        <ul>
+                                            <li className={classes.cardDiscription}>{t('posFinance.posfinaceQualitySmesQickyEasyCardDiscription1List1')}</li>
+                                            <li className={classes.cardDiscription}>{t('posFinance.posfinaceQualitySmesQickyEasyCardDiscription1List2')}</li>
+                                        </ul>
+                                    </Box>
+                                </Card>
+                            </Box>
+                        </Grid>
+                        <Grid className={classes.serviceGrid} item xs={12} sm={12} md={6} lg={6} xl={6}>
+                            <Box className={classes.iconBox}>
+                                <Typography className={classes.labelNumber}>2</Typography>
+                            </Box>
+                            <Box className={classes.cardBox}>
+                                <Card className={classes.getFinaceQuickCardFull}>
+                                    <Box className={classes.getFinaceQuickCardsBox}>
+                                        <Typography className={classes.cardTitle}>{t('posFinance.posfinaceQualitySmesQickyEasyCardTitle2')}</Typography>
+                                        <Typography className={classes.cardDiscription}>{t('posFinance.posfinaceQualitySmesQickyEasyCardDiscription2')}</Typography>
+                                        <ul>
+                                            <li className={classes.cardDiscription}>{t('posFinance.posfinaceQualitySmesQickyEasyCardDiscription2List1')}</li>
+                                            <li className={classes.cardDiscription}>{t('posFinance.posfinaceQualitySmesQickyEasyCardDiscription2List2')}</li>
+                                            <li className={classes.cardDiscription}>{t('posFinance.posfinaceQualitySmesQickyEasyCardDiscription2List3')}</li>
+                                            <li className={classes.cardDiscription}>{t('posFinance.posfinaceQualitySmesQickyEasyCardDiscription2List4')}</li>
+                                        </ul>
+                                    </Box>
+                                </Card>
+                            </Box>
+                        </Grid>
+                        <Grid className={classes.serviceGrid} item xs={12} sm={12} md={6} lg={6} xl={6}>
+                            <Box className={classes.iconBox}>
+                                <Typography className={classes.labelNumber}>3</Typography>
+                            </Box>
+                            <Box className={classes.cardBox}>
+                                <Card className={classes.getFinaceQuickCard}>
+                                    <Box className={classes.getFinaceQuickCardsBox}>
+                                        <Typography className={classes.cardTitle}>{t('posFinance.posfinaceQualitySmesQickyEasyCardTitle3')}</Typography>
+                                        <Typography className={classes.cardDiscription}>{t('posFinance.posfinaceQualitySmesQickyEasyCardDiscription3')}</Typography>
+                                    </Box>
+                                </Card>
+                            </Box>
+                        </Grid>
+                        <Grid className={classes.serviceGrid} item xs={12} sm={12} md={6} lg={6} xl={6}>
+                            <Box className={classes.iconBox}>
+                                <Typography className={classes.labelNumber}>4</Typography>
+                            </Box>
+                            <Box className={classes.cardBox}>
+                                <Card className={classes.getFinaceQuickCard}>
+                                    <Box className={classes.getFinaceQuickCardsBox}>
+                                        <Typography className={classes.cardTitle}>{t('posFinance.posfinaceQualitySmesQickyEasyCardTitle4')}</Typography>
+                                        <Typography className={classes.cardDiscription}>{t('posFinance.posfinaceQualitySmesQickyEasyCardDiscription4')}</Typography>
+                                    </Box>
+                                </Card>
+                            </Box>
+                        </Grid>
+                        <Grid className={classes.serviceGrid} item xs={12} sm={12} md={12} lg={12} xl={12}>
+                            <Box className={classes.iconBox}>
+                                <Typography className={classes.labelNumber}>5</Typography>
+                            </Box>
+                            <Box className={classes.cardFullBox}>
+                                <Card className={classes.getFinaceQuickFullCards}>
+                                    <Box className={classes.getFinaceQuickCardsBox}>
+                                        <Typography className={classes.cardTitle}>{t('posFinance.posfinaceQualitySmesQickyEasyCardTitle5')}</Typography>
+                                        <Typography className={classes.cardDiscription}>{t('posFinance.posfinaceQualitySmesQickyEasyCardDiscription5')}</Typography>
+                                    </Box>
+                                </Card>
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Box>
+            </Container>
+            <Container className={classes.ButtonContainer}>
+                <Grid className={classes.ButtonMainGrid} container spacing={2}>
+                    <Grid className={classes.ButtonGrid} item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <Button><Link className={classes.buttonLink} href={`/${locale}/learnMorePos`}>{t('getFinance.quickButton')}</Link></Button>
+                    </Grid>
+                </Grid>
+            </Container>
+
+        </section>
+    )
+}
+const useStyles = makeStyles((theme, locale) => ({
+    Title: {
+        fontSize: '35px',
+        color: '#1E396C',
+        textAlign: 'center',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '23px',
+            color: '#1E396C',
+            textAlign: 'center',
+        }
+    },
+    Discription: {
+        color: '#1E396C',
+        textAlign: 'center',
+        fontSize: '20px',
+    },
+    Divider: {
+        width: 'auto',
+        height: '2px',
+        background: '#37A753',
+        marginLeft: '45%',
+        marginRight: '45%',
+        marginTop: '10px',
+    },
+    servicImageeGrid: {
+        paddingLeft: '0px !important',
+        paddingRight: '0px',
+        display: "flex",
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    serviceGrid: {
+        paddingLeft: '0px !important',
+        paddingRight: '0px',
+        display: "flex",
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'start',
+        paddingTop:'0px !important',
+    },
+    getFinanceQuickIcon: {
+        width: '800px',
+        height: "400px",
+        [theme.breakpoints.down('md')]: {
+            width: '400px',
+            height: "200px",
+        },
+    },
+    getFinaceQuickCard: {
+        width: 'auto',
+        marginLeft: '20px',
+        marginRight: '20px',
+    },
+    getFinaceQuickCardFull: {
+        marginLeft: '20px',
+        marginRight: '20px',
+        width: 'auto',
+        [theme.breakpoints.up('xl')]: {
+            height: '350px'
+        },
+        [theme.breakpoints.down('xl')]: {
+            height: '350px'
+        },
+        [theme.breakpoints.down('lg')]: {
+            height: '380px'
+        },
+        [theme.breakpoints.between('md', 'lg')]: {
+            height: '420px'
+        },
+        [theme.breakpoints.down('md')]: {
+            height: 'auto'
+        },
+        [theme.breakpoints.between('sm', 'md')]: {
+            height: 'auto'
+        },
+        [theme.breakpoints.down('sm')]: {
+            height: 'auto'
+        }
+    },
+    iconBox: {
+        background: "#35A052",
+        padding: '20px',
+        width: '60px',
+        height: '60px',
+        borderRadius: '100%',
+        display: "flex",
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'relative',
+        top: '30px',
+        "&:hover,&:focus": {
+            color: "#ffffff",
+            pointerEvent: "all",
+            boxShadow:
+                "0px 2px 1px -1px rgb(0 0 0 / 40%), 0px 1px 1px 0px rgb(0 0 0 / 44%), 0px 1px 3px 0px rgb(0 0 0 / 52%)",
+        },
+
+
+    },
+    cardTitle: {
+        fontSize: '20px',
+        color: '#1E396C',
+        fontWeight: '500px'
+    },
+    cardDiscription: {
+        fontSize: '18px',
+        color: '#000',
+        padding: '5px'
+    },
+    labelNumber: {
+        textAlign: 'center',
+        color: '#fff',
+        fontSize: '20px',
+        fontWeight: 'bold',
+    },
+    cardFullBox: {
+        width: '100%',
+        paddingLeft: '20px',
+        paddingRight: '20px'
+    },
+    cardBox: {
+        width: '100%',
+    },
+    getFinaceQuickCardsBox: {
+        padding: '30px',
+    },
+    ButtonGrid: {
+        display: "flex",
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingTop:'0px !important',
+    },
+    Button: {
+        background: "#35A052",
+        color: '#fff',
+        fontSize: '20px',
+        paddingLeft: '15px',
+        paddingRight: '15px',
+        paddingTop: '2px',
+        paddingBottom: '2px',
+        borderRadius: '25px',
+        textTransform: 'capitalize',
+        "&:hover": {
+            color: '#fff',
+            background: "#35A052",
+            pointerEvent: "all",
+          
+        },
+    },
+    ButtonContainer: {
+        padding: '20px'
+    },
+    buttonLink: {
+        textDecoration: 'none',
+        background: "#35A052",
+        color: '#fff',
+        fontSize: '20px',
+        paddingLeft: '15px',
+        paddingRight: '15px',
+        paddingTop: '2px',
+        paddingBottom: '2px',
+        borderRadius: '25px',
+        textTransform: 'capitalize',
+        "&:hover": {
+            color: '#fff',
+            background: "#35A052",
+            pointerEvent: "all",
+          
+        },
+    },
+    WariningGrid: {
+        padding: '0px !important'
+    },
+}));

@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Ample';
+    font-display: swap;
+    src: local('Ample'), url(/font/Ample-Regular6_0.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'AmpleSoftPro';
+    font-display: swap;
+    src: local('Ample-Regular'), url(/font/AmpleSoftPro.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Tajawal';
+    font-display: swap;
+    src: local('Tajawal'), url(/font/Tajawal-Regular.ttf) format('truetype');
+}
+
+.MuiCheckbox-colorPrimary.Mui-checked {
+    color: #37a753;
+}
+
+.Mui-selected {
+    color: black !important;
+}
+
+.MuiTabs-indicator {
+    border-right: 3px solid #00d8ff;
+    color: black;
+}
+
+.Mui-checked {
+    color: #37a753 !important;
+}
+
+body {
+    letter-spacing: 0.00938em !important
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+body {
+    width: 100% !important;
+}
