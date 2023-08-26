@@ -16,14 +16,13 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import * as React from "react";
-import { useEffect } from "react";
 import LoginButton from "../LoginButton";
 import Logo from "../Logo/Logo";
 import ScmLoginButton from "../ScmLoginButton";
 import LocaleSwitcher from "../language-switcher";
 const drawerWidth = 240;
 
-function Header(props) {
+function NewHeader(props) {
   const getFinanceIcon = "/assetsNew/images/MenuIcons/getFinacneIcons.webp";
   const financeIcon = "/assetsNew/images/MenuIcons/financeIcons.webp";
   const posFinanceIcon = "/assetsNew/images/MenuIcons/posFinanceIcons.webp";
@@ -39,9 +38,6 @@ function Header(props) {
   const { locale } = useRouter();
   const { t } = useTranslation("common");
   const [isLoading, setIsLoading] = React.useState(true);
-  useEffect(() => {
-    // Apply styles or modify appearance here
-  }, []);
   const headerContent = [
     {
       menu: "1",
@@ -108,9 +104,9 @@ function Header(props) {
           <div key={index}>
             <ListItem variant="li" className={classes.listItem}>
               <span className={classes.MenuIcons}>{item.icon}</span>
-              <Link className={classes.navLink} href={`/${locale}/${item.link}`} style={{ borderBottom: router.pathname.includes(item.link) && "2px solid #3AB15F", borderRadius: "none !important", width: "auto" }} key={index}>
+              <a className={classes.navLink} href={`/${locale}/${item.link}`} style={{ borderBottom: router.pathname.includes(item.link) && "2px solid #3AB15F", borderRadius: "none !important", width: "auto" }} key={index}>
                 {t(`${item.pageName}`)}
-              </Link>
+              </a>
             </ListItem>
 
             {index !== headerContent.length - 1 && (
@@ -127,7 +123,8 @@ function Header(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }} className={classes.mainSection}>
+    <Box sx={{ display: "flex" }}>
+      <CssBaseline />
       <AppBar component="nav">
         <Toolbar className={classes.buttonToolbar}>
           <Container className={classes.buttonContainer}>
@@ -140,6 +137,13 @@ function Header(props) {
                 <LoginButton />
               </Grid>
             </Grid>
+            {/* <Box className={classes.scmButtonToolbarBox}>
+                            <ScmLoginButton />
+                        </Box>
+                        <Box className={classes.buttonToolbarBox}>
+                            <LocaleSwitcher />
+                            <LoginButton />
+                        </Box> */}
           </Container>
         </Toolbar>
         <Toolbar className={classes.menuToolbar}>
@@ -157,9 +161,9 @@ function Header(props) {
                   {headerContent.map((item, index) => (
                     <div key={index}>
                       <ListItem variant="li" className={classes.listItem}>
-                        <Link className={classes.navLink} href={`/${locale}/${item.link}`} style={{ borderBottom: router.pathname.includes(item.link) && "2px solid #3AB15F", borderRadius: "none !important", width: "auto" }} key={item.menu}>
+                        <a className={classes.navLink} href={`/${locale}/${item.link}`} style={{ borderBottom: router.pathname.includes(item.link) && "2px solid #3AB15F", borderRadius: "none !important", width: "auto" }} key={item.menu}>
                           {t(`${item.pageName}`)}
-                        </Link>
+                        </a>
                         {index !== headerContent.length - 1 && <div className={classes.divider} />}
                       </ListItem>
                     </div>
@@ -192,24 +196,10 @@ function Header(props) {
   );
 }
 
-Header.propTypes = {
+NewHeader.propTypes = {
   window: PropTypes.func,
 };
 const useStyles = makeStyles((theme, locale) => ({
-  mainSection: {
-    height: "110px !important",
-    overflow: "hidden",
-    [theme.breakpoints.down("md")]: {
-      backgroundColor: "#EFEFF0",
-      height: "110px !important",
-      overflow: "hidden",
-    },
-    [theme.breakpoints.down("sm")]: {
-      backgroundColor: "#EFEFF0",
-      height: "110px !important",
-      overflow: "hidden",
-    },
-  },
   buttonToolbar: {
     background: "linear-gradient(0.25turn, #28A4DB, #3AB15F) !important",
     minHeight: "40px !important",
@@ -442,4 +432,4 @@ const useStyles = makeStyles((theme, locale) => ({
     },
   },
 }));
-export default Header;
+export default NewHeader;

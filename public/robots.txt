@@ -3,7 +3,7 @@ User-agent: *
 Disallow: /<page-url>
 
 # Host
-Host: https://compunnet.com/
+Host: https://www.raqamyah.com/
 
 # Sitemaps
-Sitemap: https://compunnet.com/sitemap.xml
+Sitemap: https://www.raqamyah.com/sitemap.xml

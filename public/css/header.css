@@ -1,0 +1,100 @@
+.buttonToolbar {
+    background: linear-gradient(0.25turn, #28A4DB, #3AB15F) !important;
+    min-height: 40px !important;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttonToolbarBox {
+    display: flex;
+    padding: 0 !important;
+    justify-content: flex-end;
+}
+
+.scmButtonToolbarBox {
+    display: flex;
+    padding: 0 !important;
+}
+
+.menuToolbar {
+    background-color: #fff !important;
+    min-height: 70px !important;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    width: 100%;
+}
+
+.menuContainer {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.buttonContainer {
+    display: inline-flex;
+    justify-content: end;
+    padding: 0 !important;
+}
+
+.MenuIcons {
+    display: none;
+    color: #37A753;
+    width: 25px;
+    height: 25px;
+}
+
+.listItem {
+    float: left;
+    color: inherit;
+    position: relative;
+    display: flex;
+    width: auto;
+    padding: 5px;
+}
+
+.list {
+    position: relative;
+    font-size: 14px;
+    margin-left: 10px;
+    padding-left: 0;
+    list-style: none;
+    color: inherit;
+    display: flex !important;
+}
+
+.divider {
+    width: 2px;
+    content: "";
+    height: 35px;
+    display: block;
+    margin-top: 0;
+    background-color: #28A4DB;
+}
+
+.navLink {
+    color: #555555;
+    position: relative;
+    padding: 0.5rem;
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    text-transform: uppercase;
+    line-height: 20px;
+    text-decoration: none;
+    display: inline-flex;
+}
+
+.drawerButton {
+    color: #000 !important;
+}
+
+.drawerBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    left: 80%;
+    right: 80%;
+}

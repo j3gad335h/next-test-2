@@ -13,6 +13,10 @@ module.exports = {
     defaultLocale: "ar",
     localeDetection: false,
   },
+  compiler: {
+    styledComponents: true,
+    emotion: true,
+  },
   images: {
     unoptimized: true,
     domains: ["compunnet.com"],

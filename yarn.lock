@@ -1430,10 +1430,10 @@
   dependencies:
     webpack-bundle-analyzer "4.7.0"
 
-"@next/env@^13.4.3", "@next/env@13.4.5":
-  version "13.4.5"
-  resolved "https://registry.npmjs.org/@next/env/-/env-13.4.5.tgz"
-  integrity sha512-SG/gKH6eij4vwQy87b/3mbpQ1X3x2vUdnpwq6/qL2IQWjtq58EY/UuNAp9CoEZoC9sI4L9AD1r+73Z9r4d3uug==
+"@next/env@^13.4.3", "@next/env@13.4.19":
+  version "13.4.19"
+  resolved "https://registry.npmjs.org/@next/env/-/env-13.4.19.tgz"
+  integrity sha512-FsAT5x0jF2kkhNkKkukhsyYOrRqtSxrEhfliniIq0bwWbuXLgyt3Gv0Ml+b91XwjwArmuP7NxCiGd++GGKdNMQ==
 
 "@next/eslint-plugin-next@13.4.5":
   version "13.4.5"
@@ -1442,10 +1442,10 @@
   dependencies:
     glob "7.1.7"
 
-"@next/swc-win32-x64-msvc@13.4.5":
-  version "13.4.5"
-  resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.4.5.tgz"
-  integrity sha512-iyNQVc7eGehrik9RJt9xGcnO6b/pi8C7GCfg8RGenx1IlalEKbYRgBJloF7DQzwlrV47E9bQl8swT+JawaNcKA==
+"@next/swc-win32-x64-msvc@13.4.19":
+  version "13.4.19"
+  resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.4.19.tgz"
+  integrity sha512-YzA78jBDXMYiINdPdJJwGgPNT3YqBNNGhsthsDoWHL9p24tEJn9ViQf/ZqTbwSpX/RrkPupLfuuTH2sf73JBAw==
 
 "@nicolo-ribaudo/chokidar-2@2.1.8-no-fsevents.3":
   version "2.1.8-no-fsevents.3"
@@ -3432,11 +3432,11 @@ next-translate@^2.0.6:
   integrity sha512-Wl4CWqqIqeoPlrKmTgnc7w49mOEi93INUnfVHJDTqNKavlhFg26isqy0LGKWHcvthGiPFBoh5aOXBqhGEfzrSw==
 
 next@*, next@^13.4.5, "next@>= 12.0.0", "next@>= 13.2.5":
-  version "13.4.5"
-  resolved "https://registry.npmjs.org/next/-/next-13.4.5.tgz"
-  integrity sha512-pfNsRLVM9e5Y1/z02VakJRfD6hMQkr24FaN2xc9GbcZDBxoOgiNAViSg5cXwlWCoMhtm4U315D7XYhgOr96Q3Q==
+  version "13.4.19"
+  resolved "https://registry.npmjs.org/next/-/next-13.4.19.tgz"
+  integrity sha512-HuPSzzAbJ1T4BD8e0bs6B9C1kWQ6gv8ykZoRWs5AQoiIuqbGHHdQO7Ljuvg05Q0Z24E2ABozHe6FxDvI6HfyAw==
   dependencies:
-    "@next/env" "13.4.5"
+    "@next/env" "13.4.19"
     "@swc/helpers" "0.5.1"
     busboy "1.6.0"
     caniuse-lite "^1.0.30001406"
@@ -3445,15 +3445,15 @@ next@*, next@^13.4.5, "next@>= 12.0.0", "next@>= 13.2.5":
     watchpack "2.4.0"
     zod "3.21.4"
   optionalDependencies:
-    "@next/swc-darwin-arm64" "13.4.5"
-    "@next/swc-darwin-x64" "13.4.5"
-    "@next/swc-linux-arm64-gnu" "13.4.5"
-    "@next/swc-linux-arm64-musl" "13.4.5"
-    "@next/swc-linux-x64-gnu" "13.4.5"
-    "@next/swc-linux-x64-musl" "13.4.5"
-    "@next/swc-win32-arm64-msvc" "13.4.5"
-    "@next/swc-win32-ia32-msvc" "13.4.5"
-    "@next/swc-win32-x64-msvc" "13.4.5"
+    "@next/swc-darwin-arm64" "13.4.19"
+    "@next/swc-darwin-x64" "13.4.19"
+    "@next/swc-linux-arm64-gnu" "13.4.19"
+    "@next/swc-linux-arm64-musl" "13.4.19"
+    "@next/swc-linux-x64-gnu" "13.4.19"
+    "@next/swc-linux-x64-musl" "13.4.19"
+    "@next/swc-win32-arm64-msvc" "13.4.19"
+    "@next/swc-win32-ia32-msvc" "13.4.19"
+    "@next/swc-win32-x64-msvc" "13.4.19"
 
 node-fetch@^2.6.11:
   version "2.7.0"
